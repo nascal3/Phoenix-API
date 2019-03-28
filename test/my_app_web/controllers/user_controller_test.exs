@@ -42,8 +42,7 @@ defmodule MyAppWeb.UserControllerTest do
       assert %{
                "id" => id,
                "email" => "some email",
-               "is_active" => true,
-               "password" => "some password"
+               "is_active" => true
              } = json_response(conn, 200)["data"]
     end
 
@@ -65,8 +64,7 @@ defmodule MyAppWeb.UserControllerTest do
       assert %{
                "id" => id,
                "email" => "some updated email",
-               "is_active" => false,
-               "password" => "some updated password"
+               "is_active" => false
              } = json_response(conn, 200)["data"]
     end
 
