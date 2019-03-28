@@ -66,5 +66,6 @@
     <orderEntry type="library" name="earmark" level="project" />
     <orderEntry type="library" name="bcrypt_elixir" level="project" />
     <orderEntry type="library" name="elixir_make" level="project" />
+    <orderEntry type="library" name="corsica" level="project" />
   </component>
 </module>
