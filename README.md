@@ -1,4 +1,4 @@
-# MyAPI
+# My Users API
 
 To start your Phoenix server:
 
