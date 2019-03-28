@@ -3,10 +3,7 @@ defmodule MyApp.Auth.User do
   import Ecto.Changeset
 
   schema "users" do
-    field :" is_active", :boolean, default: false
     field :email, :string
-    field :password, :string, virtual: true
-    field :password_hash, :string
 
     timestamps()
   end
@@ -14,17 +11,8 @@ defmodule MyApp.Auth.User do
   @doc false
   def changeset(user, attrs) do
     user
-    |> cast(attrs, [:email, :" is_active"])
-    |> validate_required([:email, :" is_active"])
+    |> cast(attrs, [:email])
+    |> validate_required([:email])
     |> unique_constraint(:email)
   end
-
-  defp put_password_hash(%Ecto.Changeset{valid?: true, changes: %{password: password}} = changeset) do
-    change(changeset, password_hash: Bcrypt.hash_pwd_salt(password))
-  end
-
-  defp put_password_hash(changeset) do
-    changeset
-  end
-
 end
