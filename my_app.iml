@@ -5,6 +5,7 @@
       <sourceFolder url="file://$MODULE_DIR$/lib" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/test" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/_build/dev/lib/bcrypt_elixir" />
+      <excludeFolder url="file://$MODULE_DIR$/_build/dev/lib/corsica" />
       <excludeFolder url="file://$MODULE_DIR$/_build/dev/lib/elixir_make" />
       <excludeFolder url="file://$MODULE_DIR$/_build/test/lib/bcrypt_elixir" />
       <excludeFolder url="file://$MODULE_DIR$/_build/test/lib/connection" />
