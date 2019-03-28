@@ -12,4 +12,11 @@ defmodule MyAppWeb.FallbackController do
     |> put_view(MyAppWeb.ErrorView)
     |> render(:"404")
   end
+
+  def call(conn, {:error, %Ecto.Changeset{}}) do
+    conn
+    |> put_status(:unprocessable_entity)
+    |> put_view(MyAppWeb.ErrorView)
+    |> render(:"422")
+  end
 end
